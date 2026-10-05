@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Munashe Benjamin: Marketing, Sales &amp; Business Analytics</title>
+<meta name="description" content="Munashe Benjamin: marketing and sales professional with an MSc in Digital Marketing and Media, now moving into Business Analytics.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Munashe Benjamin: Marketing, Sales & Business Analytics">
+<meta property="og:description" content="From the sales floor in Harare to a master's in New York, I'm learning to turn data into decisions.">
+<meta property="og:type" content="website">
+<!-- Replace with your GitHub Pages URL, e.g. https://yourusername.github.io/ -->
+<meta property="og:url" content="https://yourusername.github.io/">
+<!-- Add og:image later: 1200x630 PNG matching dark theme -->
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Munashe Benjamin: Marketing, Sales & Business Analytics">
+<meta name="twitter:description" content="From the sales floor in Harare to a master's in New York, I'm learning to turn data into decisions.">
+<meta name="twitter:url" content="https://yourusername.github.io/">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+
+<!-- Apply saved theme before first paint -->
+<script>
+  (function () {
+    try {
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #020a18;
+    --bg-grad: linear-gradient(170deg, #020a18 0%, #041028 40%, #06142e 70%, #020a18 100%);
+    --surface: rgba(8,24,56,0.85);
+    --border: rgba(0,170,255,0.12);
+    --border-glow: rgba(0,170,255,0.3);
+    --text: #d0e0f0;
+    --text-bright: #e8f0ff;
+    --text-dim: #6888aa;
+    --neon: #00aaff;
+    --cyan: #00e5ff;
+    --green: #00ff88;
+    --amber: #ffaa00;
+    --red: #ff4466;
+    --purple: #aa66ff;
+    --header-bg: rgba(2,10,24,0.72);
+    --grid-line: rgba(0,170,255,0.03);
+    --orb-opacity: 0.08;
+    --btn-text: #020a18;
+    --tag-bg: rgba(0,170,255,0.08);
+  }
+
+  html.light {
+    --bg: #f3f6fb;
+    --bg-grad: linear-gradient(170deg, #f6f9fd 0%, #eaf1fa 40%, #e3ecf8 70%, #f6f9fd 100%);
+    --surface: rgba(255,255,255,0.9);
+    --border: rgba(0,90,180,0.14);
+    --border-glow: rgba(0,110,210,0.35);
+    --text: #24344a;
+    --text-bright: #0a1628;
+    --text-dim: #5a6e88;
+    --neon: #0070c9;
+    --cyan: #008fb0;
+    --green: #00905a;
+    --amber: #a86400;
+    --red: #cf2342;
+    --purple: #7038cc;
+    --header-bg: rgba(246,249,253,0.78);
+    --grid-line: rgba(0,90,180,0.05);
+    --orb-opacity: 0.12;
+    --btn-text: #ffffff;
+    --tag-bg: rgba(0,112,201,0.07);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: color .3s ease, background-color .3s ease;
+  }
+
+  a { color: var(--neon); text-decoration: none; transition: color .2s ease, text-shadow .2s ease; }
+  a:hover { color: var(--cyan); text-shadow: 0 0 12px var(--border-glow); }
+
+  /* ---------- Background layers ---------- */
+  .bg-gradient {
+    position: fixed; inset: 0; z-index: -3;
+    background: var(--bg-grad);
+  }
+  .bg-grid {
+    position: fixed; inset: 0; z-index: -2;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .orb {
+    position: fixed; z-index: -1;
+    width: 480px; height: 480px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: var(--orb-opacity);
+    pointer-events: none;
+  }
+  /* Positioned well outside the 880px column (440px half-width + padding + blur + orbit) */
+  .orb-1 { background: var(--neon);   top: 6%;  right: calc(50% + 640px); animation: orbitA 28s ease-in-out infinite; }
+  .orb-2 { background: var(--purple); top: 45%; left:  calc(50% + 640px); animation: orbitB 34s ease-in-out infinite; }
+  .orb-3 { background: var(--cyan);   bottom: -8%; right: calc(50% + 660px); width: 380px; height: 380px; animation: orbitB 40s ease-in-out infinite reverse; }
+
+  @keyframes orbitA {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(-50px, 40px); }
+    50%  { transform: translate(-20px, 80px); }
+    75%  { transform: translate(-60px, 30px); }
+    100% { transform: translate(0, 0); }
+  }
+  @keyframes orbitB {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(50px, -40px); }
+    50%  { transform: translate(20px, -80px); }
+    75%  { transform: translate(60px, -30px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    max-width: 880px; margin: 0 auto; padding: 14px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand {
+    font-weight: 700; font-size: 1.05rem; color: var(--text-bright);
+    letter-spacing: -0.01em;
+  }
+  .brand:hover { color: var(--text-bright); text-shadow: none; }
+  .header-actions { display: flex; gap: 8px; }
+  .icon-btn {
+    width: 38px; height: 38px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    cursor: pointer;
+    transition: border-color .2s ease, color .2s ease, box-shadow .2s ease;
+  }
+  .icon-btn:hover { border-color: var(--border-glow); color: var(--cyan); box-shadow: 0 0 14px var(--border); }
+  .icon-btn svg { width: 18px; height: 18px; }
+  .icon-sun { display: none; }
+  html.light .icon-sun { display: block; }
+  html.light .icon-moon { display: none; }
+  .icon-expand { display: none; }
+  .all-collapsed .icon-expand { display: block; }
+  .all-collapsed .icon-collapse { display: none; }
+
+  /* ---------- Content ---------- */
+  main, footer { position: relative; z-index: 1; }
+  .container { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 96px 0 64px; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 18px;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--green); box-shadow: 0 0 10px var(--green);
+  }
+  .hero h1 {
+    font-size: clamp(2.6rem, 7vw, 4.2rem);
+    font-weight: 800; line-height: 1.05; letter-spacing: -0.03em;
+    color: var(--text-bright);
+  }
+  .hero-role {
+    margin-top: 14px;
+    font-size: clamp(1rem, 2.4vw, 1.2rem);
+    font-weight: 500;
+    color: var(--neon);
+  }
+  .hero-line {
+    margin-top: 36px;
+    font-size: clamp(1.4rem, 3.6vw, 2rem);
+    font-weight: 600; line-height: 1.35; letter-spacing: -0.015em;
+    color: var(--text-bright);
+    max-width: 760px;
+    padding-left: 20px;
+    border-left: 3px solid var(--cyan);
+  }
+  .cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    margin-top: 40px;
+    padding: 14px 26px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--neon), var(--cyan));
+    color: var(--btn-text);
+    font-weight: 600; font-size: 1rem;
+    box-shadow: 0 6px 28px var(--border-glow);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .cta:hover { color: var(--btn-text); transform: translateY(-2px); box-shadow: 0 10px 36px var(--border-glow); text-shadow: none; }
+  .cta svg { width: 18px; height: 18px; }
+
+  /* ---------- Sections ---------- */
+  .sections { display: flex; flex-direction: column; gap: 16px; padding-bottom: 80px; scroll-margin-top: 80px; }
+  .section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color .25s ease, box-shadow .25s ease;
+  }
+  .section:hover { border-color: var(--border-glow); }
+  .section-toggle {
+    width: 100%;
+    display: flex; align-items: center; gap: 16px;
+    padding: 20px 22px;
+    background: transparent; border: none;
+    color: var(--text-bright);
+    font: inherit; font-size: 1.15rem; font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+  }
+  .section-num {
+    flex: 0 0 auto;
+    width: 34px; height: 34px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    border: 1.5px solid var(--neon);
+    color: var(--neon);
+    font-size: .9rem; font-weight: 700;
+    box-shadow: 0 0 12px var(--border);
+  }
+  .section-title { flex: 1 1 auto; }
+  .section-icon {
+    flex: 0 0 auto; position: relative;
+    width: 16px; height: 16px;
+  }
+  .section-icon::before, .section-icon::after {
+    content: ''; position: absolute; left: 50%; top: 50%;
+    background: var(--text-dim);
+    border-radius: 2px;
+    transition: transform .3s ease, background .2s ease;
+  }
+  .section-icon::before { width: 14px; height: 2px; transform: translate(-50%, -50%); }
+  .section-icon::after  { width: 2px; height: 14px; transform: translate(-50%, -50%) scaleY(0); }
+  .section:not(.open) .section-icon::after { transform: translate(-50%, -50%) scaleY(1); }
+  .section-toggle:hover .section-icon::before,
+  .section-toggle:hover .section-icon::after { background: var(--cyan); }
+  .section-toggle:focus-visible { outline: 2px solid var(--neon); outline-offset: -2px; border-radius: 16px; }
+
+  .section-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .35s ease;
+  }
+  .section.open .section-body { grid-template-rows: 1fr; }
+  .section-inner { overflow: hidden; }
+  .section-content { padding: 0 22px 24px 72px; }
+
+  .section-content p + p { margin-top: 12px; }
+  .section-content strong { color: var(--text-bright); font-weight: 600; }
+
+  /* Timeline */
+  .timeline { list-style: none; position: relative; }
+  .timeline::before {
+    content: ''; position: absolute; left: 5px; top: 8px; bottom: 8px;
+    width: 1px; background: var(--border-glow);
+  }
+  .timeline li { position: relative; padding-left: 26px; }
+  .timeline li + li { margin-top: 18px; }
+  .timeline li::before {
+    content: ''; position: absolute; left: 0; top: 8px;
+    width: 11px; height: 11px; border-radius: 50%;
+    background: var(--bg); border: 2px solid var(--neon);
+  }
+  .timeline li:last-child::before { background: var(--neon); box-shadow: 0 0 10px var(--neon); }
+  .t-head { color: var(--text-bright); font-weight: 600; }
+  .t-meta { font-size: .88rem; color: var(--text-dim); }
+  .t-desc { margin-top: 4px; font-size: .95rem; }
+
+  /* Bullet list */
+  .bullets { list-style: none; }
+  .bullets li { position: relative; padding-left: 22px; }
+  .bullets li + li { margin-top: 12px; }
+  .bullets li::before {
+    content: ''; position: absolute; left: 2px; top: 10px;
+    width: 7px; height: 7px; border-radius: 2px;
+    background: var(--cyan); transform: rotate(45deg);
+  }
+  .accent-amber { color: var(--amber); }
+  .accent-green { color: var(--green); }
+  .accent-purple { color: var(--purple); }
+
+  .doi { font-size: .88rem; color: var(--text-dim); }
+
+  /* Tags */
+  .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+  .tag {
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--tag-bg);
+    font-size: .9rem;
+    color: var(--text-bright);
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 0 40px;
+    font-size: .85rem;
+    color: var(--text-dim);
+    text-align: center;
+  }
+  footer .dot { margin: 0 8px; opacity: .6; }
+
+  @media (max-width: 600px) {
+    .hero { padding: 64px 0 48px; }
+    .section-toggle { padding: 18px 16px; gap: 12px; font-size: 1.05rem; }
+    .section-content { padding: 0 16px 22px 16px; }
+    .hero-line { padding-left: 16px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .orb { animation: none; }
+    .section-body, .cta { transition: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
+
+  <header>
+    <div class="header-inner">
+      <a href="#top" class="brand">Munashe Benjamin</a>
+      <div class="header-actions" id="headerActions">
+        <button class="icon-btn" id="themeToggle" title="Toggle light / dark mode" aria-label="Toggle light / dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="icon-btn" id="collapseToggle" title="Collapse all sections" aria-label="Collapse or expand all sections">
+          <svg class="icon-collapse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 20 12 15 17 20"/><polyline points="7 4 12 9 17 4"/></svg>
+          <svg class="icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 15 12 20 17 15"/><polyline points="7 9 12 4 17 9"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="container">
+
+      <section class="hero">
+        <div class="hero-eyebrow">Moving into Business Analytics</div>
+        <h1>Munashe Benjamin</h1>
+        <p class="hero-role">Marketing &amp; sales professional · MSc in Digital Marketing and Media, Yeshiva University (May 2026)</p>
+        <p class="hero-line">From the sales floor in Harare to a master's in New York, I'm learning to turn data into decisions.</p>
+        <a href="#sections" class="cta">
+          Read my story
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+        </a>
+      </section>
+
+      <div class="sections" id="sections">
+
+        <!-- 1. Where I've been -->
+        <div class="section open">
+          <button class="section-toggle" aria-expanded="true">
+            <span class="section-num">1</span>
+            <span class="section-title">Where I've been</span>
+            <span class="section-icon" aria-hidden="true"></span>
+          </button>
+          <div class="section-body">
+            <div class="section-inner">
+              <div class="section-content">
+                <p style="margin-bottom:20px;">Experience in Zimbabwe and Zambia, from Delta Beverages (2006) to Agrifoods (CFI) (2024).</p>
+                <ul class="timeline">
+                  <li>
+                    <div class="t-head">Sales and Distribution Clerk · Delta Beverages</div>
+                    <div class="t-meta">Masvingo, Zimbabwe · 2006 – 2008</div>
+                    <div class="t-desc">Managed sales orders and delivery logistics, improving on-time delivery rates by 25%.</div>
+                  </li>
+                  <li>
+                    <div class="t-head">Customer Services Representative · Cumview Corporate Communications</div>
+                    <div class="t-meta">Harare, Zimbabwe · 2009 – 2011</div>
+                    <div class="t-desc">Developed client-aligned advertising content, boosting brand awareness and repeat business.</div>
+                  </li>
+                  <li>
+                    <div class="t-head">Cash Salesclerk · Agrifoods (CFI)</div>
+                    <div class="t-meta">Harare, Zimbabwe · 2011 – 2016</div>
+                    <div class="t-desc">Processed 150+ daily transactions with 100% audit compliance. Improved delivery scheduling and reduced dispatch delays by 30%.</div>
+                  </li>
+                  <li>
+                    <div class="t-head">Assistant Stores Manager · Poundstretcher</div>
+                    <div class="t-meta">Lusaka, Zambia · 2016 – 2018</div>
+                    <div class="t-desc">Managed inventory of 3,000+ SKUs with 99% accuracy. Supervised staff and streamlined warehouse operations, improving efficiency by 15%.</div>
+                  </li>
+                  <li>
+                    <div class="t-head">Sales Representative · Agrifoods (CFI)</div>
+                    <div class="t-meta">Harare, Zimbabwe · 2018 – 2024</div>
+                    <div class="t-desc">Promoted livestock and poultry feed products, driving 20–30% monthly revenue growth. Delivered tailored product advice and live demonstrations to 150+ clients. Surpassed monthly sales targets by up to 25% through strategic territory management.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. What I've learned -->
+        <div class="section open">
+          <button class="section-toggle" aria-expanded="true">
+            <span class="section-num">2</span>
+            <span class="section-title">What I've learned</span>
+            <span class="section-icon" aria-hidden="true"></span>
+          </button>
+          <div class="section-body">
+            <div class="section-inner">
+              <div class="section-content">
+                <ul class="timeline">
+                  <li>
+                    <div class="t-head">Advanced and Graduate Diploma in Marketing · Institute of Commercial Management (ICM UK)</div>
+                    <div class="t-meta">August 2012</div>
+                    <div class="t-desc">Also awarded the Diploma in Marketing, Advertising and Public Relations after completion of the Advanced Diploma.</div>
+                  </li>
+                  <li>
+                    <div class="t-head">Bachelor of Business Administration in Marketing Management · IMM Graduate School of Marketing</div>
+                    <div class="t-meta">Harare, Zimbabwe · October 2019</div>
+                  </li>
+                  <li>
+                    <div class="t-head">MSc in Digital Marketing and Media · Yeshiva University, Katz School of Science and Health</div>
+                    <div class="t-meta">New York, NY · January 2025 – May 2026</div>
+                    <div class="t-desc">Relevant coursework: Brand Management, Marketing Management and Strategy, Consumer Behaviour and Customer Relationship Management.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Work I'm proud of -->
+        <div class="section open">
+          <button class="section-toggle" aria-expanded="true">
+            <span class="section-num">3</span>
+            <span class="section-title">Work I'm proud of</span>
+            <span class="section-icon" aria-hidden="true"></span>
+          </button>
+          <div class="section-body">
+            <div class="section-inner">
+              <div class="section-content">
+                <ul class="bullets">
+                  <li>
+                    <strong class="accent-purple">Published peer-reviewed article:</strong>
+                    <em>"The Personalization Paradox: Exploring the Impact of AI-Powered Personalization on Consumer Trust and Loyalty in Digital Marketing"</em>, Indiana Journal of Economics and Business Management, 5(5), 2025.
+                    <br><span class="doi">doi: <a href="https://doi.org/10.5281/zenodo.17436452" target="_blank" rel="noopener">10.5281/zenodo.17436452</a></span>
+                  </li>
+                  <li>
+                    <strong class="accent-amber">Sales Representative at Agrifoods (CFI), 2018–2024:</strong>
+                    drove 20–30% monthly revenue growth and surpassed monthly sales targets by up to 25% through strategic territory management.
+                  </li>
+                  <li>
+                    <strong class="accent-green">Agrifoods (CFI) projects, 2023–2024:</strong>
+                    worked with the Nutrition team on feed optimisation, including reintroduction trials for a discontinued feed product, reformulation testing of a high-energy beef feed, and performance tracking for a custom broiler feed.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Where I'm heading -->
+        <div class="section open">
+          <button class="section-toggle" aria-expanded="true">
+            <span class="section-num">4</span>
+            <span class="section-title">Where I'm heading</span>
+            <span class="section-icon" aria-hidden="true"></span>
+          </button>
+          <div class="section-body">
+            <div class="section-inner">
+              <div class="section-content">
+                <p>Working on product optimisation, client performance analysis, and cross-functional decision-making deepened my interest in using analytics to address business challenges. I am now pursuing opportunities in <strong>Business Analytics</strong> to contribute to strategic, data-informed decision-making.</p>
+                <ul class="bullets" style="margin-top:18px;">
+                  <li>Optional Practical Training (OPT) application submitted, awaiting final approval.</li>
+                  <li>Preparing my application for the MSc Business Analytics for Decision Makers at the National College of Ireland.</li>
+                  <li>Continuing professional development in business analytics and data-driven decision-making.</li>
+                </ul>
+                <p style="margin-top:18px;">Contact: <a href="mailto:benjaminmunashe@gmail.com">benjaminmunashe@gmail.com</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Skills -->
+        <div class="section open">
+          <button class="section-toggle" aria-expanded="true">
+            <span class="section-num">5</span>
+            <span class="section-title">Skills</span>
+            <span class="section-icon" aria-hidden="true"></span>
+          </button>
+          <div class="section-body">
+            <div class="section-inner">
+              <div class="section-content">
+                <div class="tags">
+                  <span class="tag">Data interpretation &amp; insight generation</span>
+                  <span class="tag">Market research</span>
+                  <span class="tag">Consumer behaviour analysis</span>
+                  <span class="tag">Social media strategy &amp; analytics</span>
+                  <span class="tag">Social media marketing</span>
+                  <span class="tag">Email marketing</span>
+                  <span class="tag">Excel</span>
+                  <span class="tag">PowerPoint</span>
+                  <span class="tag">Microsoft Word</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      Munashe Benjamin<span class="dot">·</span><span id="year">2026</span><span class="dot">·</span>Built with the AI Badge
+    </div>
+  </footer>
+
+<script>
+  (function () {
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle
+    var root = document.documentElement;
+    document.getElementById('themeToggle').addEventListener('click', function () {
+      var isLight = root.classList.toggle('light');
+      try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch (e) {}
+    });
+
+    // Sections
+    var sections = Array.prototype.slice.call(document.querySelectorAll('.section'));
+    var collapseBtn = document.getElementById('collapseToggle');
+    var actions = document.getElementById('headerActions');
+
+    function setOpen(section, open) {
+      section.classList.toggle('open', open);
+      section.querySelector('.section-toggle').setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    function syncCollapseButton() {
+      var anyOpen = sections.some(function (s) { return s.classList.contains('open'); });
+      actions.classList.toggle('all-collapsed', !anyOpen);
+      collapseBtn.title = anyOpen ? 'Collapse all sections' : 'Expand all sections';
+    }
+
+    sections.forEach(function (section) {
+      section.querySelector('.section-toggle').addEventListener('click', function () {
+        setOpen(section, !section.classList.contains('open'));
+        syncCollapseButton();
+      });
+    });
+
+    collapseBtn.addEventListener('click', function () {
+      var anyOpen = sections.some(function (s) { return s.classList.contains('open'); });
+      sections.forEach(function (s) { setOpen(s, !anyOpen); });
+      syncCollapseButton();
+    });
+
+    syncCollapseButton();
+  })();
+</script>
+</body>
+</html>
